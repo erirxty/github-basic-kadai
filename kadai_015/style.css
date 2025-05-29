@@ -1,8 +1,28 @@
+html {
+  font-size: 20px;
+
+.skyblue-heading{
+  color:#87ceeb;
+}
+  
+  .pink-heading{
+    color:rgb(255,192,203);
+}
+}
+
 body{
   font-family: "Arial", "Meiryo", sans-serif;
-  font-size: 20px;
+  
   text-align: center;
+  
 }
+
+p {
+  font-weight: bold;
+ 
+}
+
+
 
 h1 {
   font-family: Josefin Sans, sans-serif;
@@ -12,16 +32,12 @@ h1 {
   border-bottom: 3px solid rgb(115,115,114);
   .skyblue {
     color: skyblue;
+    font-size: 1.2em;
   }
   .pink {
     color:rgb(255,192,203);
+    font-size: 1.2em;
   }
-  
-  h2.text-skyblue {
-    color: skyblue !important;
-  }
-  h2.pink-heading{
-    color: rgb(255,192,203)!important;
-  }
-
 }
+  
+  
