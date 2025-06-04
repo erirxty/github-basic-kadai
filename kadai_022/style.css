@@ -22,6 +22,7 @@ main {
 #parent {
   display: flex;
   justify-content: space-around;
+  flax-direction: row;
 }
 .contents {
   border: 3px solid rgb(238, 204, 204);
@@ -29,9 +30,11 @@ main {
   padding: 10px 15px;
   margin: 20px 0;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  margin: 10px, 0;
 }
+
 h2 {
   font-size: 25px;
   border-bottom: 3px solid rgb(236, 122, 122);
@@ -60,13 +63,19 @@ a:visited {
 a:hover {
   color: rgb(245, 178, 168);
 }
-@media screen and (max-width: 768px) h2 {
-  font-size: 30px;
-}
+@media screen and (max-width: 768px) {
+  #parent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents {
+    flex-basis: 100%;
+  }
 
-p {
-  font-size: 25px;
-}
-#parent {
-  flex-direction: column;
+  p {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 30px;
+  }
 }
