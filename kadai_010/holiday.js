@@ -28,10 +28,12 @@ for (let i = 0; i < holidays.length; i += 1) {
 
 // while文の場合
 let i = 0;
-while (holidays.length > 0) {
+while (i < holidays.length) {
   // 配列から要素を取り出す
-  const holiday = holidays.shift();
+  const holiday = holidays[i];
 
   // 取り出した要素を表示する
   console.log(holiday);
+
+  i++;
 }
