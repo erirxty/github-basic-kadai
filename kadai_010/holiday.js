@@ -27,6 +27,7 @@ for (let i = 0; i < holidays.length; i += 1) {
 }
 
 // while文の場合
+let i = 0;
 while (holidays.length > 0) {
   // 配列から要素を取り出す
   const holiday = holidays.shift();
