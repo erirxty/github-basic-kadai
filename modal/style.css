@@ -1,7 +1,16 @@
 body {
+  position: relative;
+  min-height: 100vh;
   background-color: #add8e6;
   margin: 0;
   padding: 0;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal {
@@ -14,11 +23,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   z-index: 1000;
-  display: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
 }
 .modal.is-active {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 .modal-content {
   display: flex;
@@ -46,7 +61,6 @@ body {
 }
 .close:hover {
   color: #000;
-  text-decoration: none;
 }
 .sprunki-image {
   width: 50%;
