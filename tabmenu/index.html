@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>私のレシピサイト</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="tab.js" defer></script>
+  </head>
+  <body>
+    <h1>私のレシピサイト</h1>
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="washoku">和食</button>
+        <button class="tab-button" data-tab="yoshoku">洋食</button>
+        <button class="tab-button" data-tab="chuka">中華</button>
+        <button class="tab-button" data-tab="dessert">デザート</button>
+      </div>
+
+      <div class="tab-content">
+        <div id="washoku" class="tab-pane active">
+          <h3>和食レシピ</h3>
+          <p>今日の献立にぴったりの和食を見つけましょう。</p>
+          <ul class="recipe-list">
+            <li><a href="#">肉じゃが</a></li>
+            <li><a href="#">味噌汁</a></li>
+            <li><a href="#">親子丼</a></li>
+          </ul>
+          <p>他にもたくさんの和食レシピがあります！</p>
+          <img src="和食.png" alt="和食の写真" class="recipe-image" />
+        </div>
+
+        <div id="yoshoku" class="tab-pane">
+          <h3>洋食レシピ</h3>
+          <p>食卓を華やかにする洋食に挑戦！</p>
+          <ul class="recipe-list">
+            <li><a href="#">ハンバーグ</a></li>
+            <li><a href="#">パスタ（ミートソース）</a></li>
+            <li><a href="#">グラタン</a></li>
+          </ul>
+          <p>簡単なものから本格的なものまで。</p>
+          <img src="洋食.png" alt="洋食の写真" class="recipe-image" />
+        </div>
+
+        <div id="chuka" class="tab-pane">
+          <h3>中華レシピ</h3>
+          <p>家族みんなで楽しめる中華料理。</p>
+          <ul class="recipe-list">
+            <li><a href="#">麻婆豆腐</a></li>
+            <li><a href="#">餃子</a></li>
+            <li><a href="#">ラーメン</a></li>
+          </ul>
+          <p>人気の定番中華をマスターしよう。</p>
+          <img src="中華.png" alt="中華の写真" class="recipe-image" />
+        </div>
+
+        <div id="dessert" class="tab-pane">
+          <h3>デザートレシピ</h3>
+          <p>食後のデザートやティータイムに。</p>
+          <ul class="recipe-list">
+            <li><a href="#">パンケーキ</a></li>
+            <li><a href="#">チーズケーキ</a></li>
+            <li><a href="#">プリン</a></li>
+          </ul>
+          <p>手作りスイーツでカフェ気分。</p>
+          <img src="デザート.png" alt="デザートの写真" class="recipe-image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
