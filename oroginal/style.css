@@ -10,7 +10,7 @@ body {
 .swiper-background {
   width: 100vw;
   height: 100vh;
-  background-image: url("ビール背景.png");
+  background-image: url("back.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -45,7 +45,7 @@ img {
   max-height: 600px;
   position: relative;
   z-index: 200;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -83,9 +83,19 @@ img {
   color: #fff;
   border-radius: 5px;
 }
-.swioer-button-next,
+.swiper-button-next,
 .swiper-button-prev {
-  display: none;
+  background-image: url("black.png") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.swiper-slide-active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-slide-active .item {
+  animation: slideInFromBottomRight 2s ease-out forwards;
 }
 
 @keyframes slideInFromBottomRight {
@@ -102,4 +112,11 @@ img {
 .item {
   opacity: 0;
   transform: translate(30px, 30px);
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }

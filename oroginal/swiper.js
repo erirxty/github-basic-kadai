@@ -4,39 +4,19 @@ const mySwiper = new Swiper(".swiper", {
     delay: 4000,
     disableOnInteraction: false,
   },
+  e: true,
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
   },
-  effect: "slide",
-  on: {
-    init: function () {
-      this.slides[this.activeIndex]
-        .querySelectorAll(".item")
-        .forEach((item, index) => {
-          item.style.animation = `slideInFromBottomRight 0.8s ease-out ${
-            0.2 * index
-          }s forwards`;
-        });
-    },
 
-    slideChangeTransitionEnd: function () {
-      this.slides.forEach((slide) => {
-        slide.querySelectorAll(".item").forEach((item) => {
-          item.style.animation = "none";
-
-          item.style.opacity = "0";
-          item.style.transform = "translate(30px, 30px)";
-        });
-      });
-
-      this.slides[this.activeIndex]
-        .querySelectorAll(".item")
-        .forEach((item, index) => {
-          item.style.animation = `slideInFromBottomRight 0.8s ease-out ${
-            0.2 * index
-          }s forwards`;
-        });
-    },
+  effect: "fade",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
