@@ -16,16 +16,15 @@
                 rsort($array); 
                 echo "降順ソートします。<br>";
             }
-            foreach ($array as $value) { /
+            foreach ($array as $value) { 
                 echo $value . "<br>"; 
             }
             echo "<br>"; 
         }
         $nums= [15, 4, 18, 23, 10];
         sort_2way($nums, TRUE);
-        $num = [15, 4, 18, 23, 10];
         sort_2way($nums, FALSE);
         ?>
     </p>
-</body>s
+</body>
 </html>
